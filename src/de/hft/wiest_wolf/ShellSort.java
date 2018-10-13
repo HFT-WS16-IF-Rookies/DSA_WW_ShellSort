@@ -1,5 +1,7 @@
 package de.hft.wiest_wolf;
 
+import java.util.Random;
+
 public class ShellSort
 {
     public static long startTime;
@@ -27,7 +29,12 @@ public class ShellSort
 
     public static int[] generate(int size)
     {
-        throw new UnsupportedOperationException();
+        Random random = new Random();
+        int[] result = new int[size];
+        for (int i=0; i < size; i++)
+            result[i] = random.nextInt();
+
+        return result;
     }
 
     public static int getMax(int[] input)
