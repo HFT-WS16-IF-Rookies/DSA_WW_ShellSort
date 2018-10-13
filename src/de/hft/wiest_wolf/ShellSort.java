@@ -49,8 +49,6 @@ public class ShellSort
             }
             dest--;
         }
-
-        return input;
     }
 
     public static int[] generate(int size)
