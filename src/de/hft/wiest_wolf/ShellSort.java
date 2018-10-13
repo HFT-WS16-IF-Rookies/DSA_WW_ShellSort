@@ -17,9 +17,17 @@ public class ShellSort
         return stopTime - startTime;
     }
 
-    public static void lukasSort(int[] input)
+    public static int[] lukasSort(int[] input)
     {
-        return stopTime - startTime;
+        int[] tmp = new int[input.length];
+
+        for (int i=0; i < input.length; i++)
+        {
+            int index = getIndexOfMin(input);
+            tmp[i] = input[index];
+            input[index] = Integer.MAX_VALUE;
+        }
+        return tmp;
     }
 
     public static void bubbleSort(int[] input)
