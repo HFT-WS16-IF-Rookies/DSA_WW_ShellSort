@@ -44,7 +44,14 @@ public class ShellSort
 
     public static int getMin(int[] input)
     {
-        throw new UnsupportedOperationException();
+        int result = input[0];
+        for (int i: input)
+        {
+            if (i < result)
+                result = i;
+        }
+
+        return result;
     }
 
 }
