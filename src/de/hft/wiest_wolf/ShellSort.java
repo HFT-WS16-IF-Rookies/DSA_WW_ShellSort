@@ -17,7 +17,7 @@ public class ShellSort
         return stopTime - startTime;
     }
 
-    public static long lukasSort(int[] input)
+    public static void lukasSort(int[] input)
     {
         return stopTime - startTime;
     }
