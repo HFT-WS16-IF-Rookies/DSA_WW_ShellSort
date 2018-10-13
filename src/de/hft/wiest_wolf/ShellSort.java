@@ -81,12 +81,34 @@ public class ShellSort
 
     public static int getIndexOfMax(int[] input)
     {
-        throw new UnsupportedOperationException();
+        int result = input[0];
+        int index = 0;
+        for (int i=0; i < input.length; i++)
+        {
+            if (input[i] > result)
+            {
+                result = input[i];
+                index = i;
+            }
+        }
+
+        return index;
     }
 
     public static int getIndexOfMin(int[] input)
     {
-        throw new UnsupportedOperationException();
+        int result = input[0];
+        int index = 0;
+        for (int i=0; i < input.length; i++)
+        {
+            if (input[i] < result)
+            {
+                result = input[i];
+                index = i;
+            }
+        }
+
+        return index;
     }
 
 }
