@@ -79,4 +79,14 @@ public class ShellSort
         return result;
     }
 
+    public static int getIndexOfMax(int[] input)
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    public static int getIndexOfMin(int[] input)
+    {
+        throw new UnsupportedOperationException();
+    }
+
 }
