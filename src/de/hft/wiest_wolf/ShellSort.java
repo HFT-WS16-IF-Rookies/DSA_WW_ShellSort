@@ -57,26 +57,12 @@ public class ShellSort
 
     public static int getMax(int[] input)
     {
-        int result = input[0];
-        for (int i: input)
-        {
-            if (i > result)
-                result = i;
-        }
-
-        return result;
+        return input[getIndexOfMax(input)];
     }
 
     public static int getMin(int[] input)
     {
-        int result = input[0];
-        for (int i: input)
-        {
-            if (i < result)
-                result = i;
-        }
-
-        return result;
+        return input[getIndexOfMin(input)];
     }
 
     public static int getIndexOfMax(int[] input)
