@@ -22,7 +22,7 @@ public class ShellSort
         return stopTime - startTime;
     }
 
-    public static int[] bubbleSort(int[] input)
+    public static void bubbleSort(int[] input)
     {
         boolean changed = true;
         int dest = input.length -1;
