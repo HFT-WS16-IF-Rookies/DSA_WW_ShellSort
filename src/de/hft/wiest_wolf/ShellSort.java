@@ -24,7 +24,25 @@ public class ShellSort
 
     public static int[] bubbleSort(int[] input)
     {
-        throw new UnsupportedOperationException();
+        boolean changed = true;
+        int dest = input.length -1;
+        while (changed)
+        {
+            changed = false;
+            for (int i=0; i < dest; i++)
+            {
+                if (input[i] > input[i+1])
+                {
+                    int tmp     = input[i];
+                    input[i]    = input[i+1];
+                    input[i+1]  = tmp;
+                    changed = true;
+                }
+            }
+            dest--;
+        }
+
+        return input;
     }
 
     public static int[] generate(int size)
