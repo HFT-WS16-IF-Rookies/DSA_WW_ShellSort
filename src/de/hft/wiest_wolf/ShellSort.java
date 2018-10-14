@@ -21,13 +21,52 @@ public class ShellSort
     {
         int[] tmp = new int[input.length];
 
-        int index;
+        int indexMin = 0;
+        int min;
+        int indexMax = input.length-1;
+        int max;
+        int fromIndex = 0;
         int toIndex = input.length;
-        for (int i=0; i < input.length; i++)
+        int loops = input.length % 2 == 0 ? input.length / 2 : input.length / 2 +1;
+        int innerLoops = loops;
+
+        for (int i=0; i < loops; i++, innerLoops--)
         {
-            index = getIndexOfMin(input, 0, toIndex);
-            tmp[i] = input[index];
-            input[index] = input[toIndex -1];
+
+            min = input[fromIndex];
+            max = input[toIndex-1];
+
+            for (int j=0, innerFromIndex=fromIndex, innerToIndex=toIndex-1; j < innerLoops; j++, innerFromIndex++, innerToIndex--)
+            {
+                if(input[innerFromIndex] < min)
+                {
+                    min = input[innerFromIndex];
+                    indexMin = innerFromIndex;
+                }
+                else if (input[innerFromIndex] > max)
+                {
+                    max = input[innerFromIndex];
+                    indexMax = innerFromIndex;
+                }
+
+                if (input[innerToIndex] > max)
+                {
+                    max = input[innerToIndex];
+                    indexMax = innerToIndex;
+                }
+                else if(input[innerToIndex] < min)
+                {
+                    min = input[innerToIndex];
+                    indexMin = innerToIndex;
+                }
+            }
+
+            tmp[i] = min;
+            tmp[toIndex-1] = max;
+            input[indexMin] = input[fromIndex];
+            input[indexMax] = input[toIndex-1];
+
+            fromIndex++;
             toIndex--;
         }
         return tmp;
