@@ -22,11 +22,13 @@ public class ShellSort
         int[] tmp = new int[input.length];
 
         int index;
+        int toIndex = input.length;
         for (int i=0; i < input.length; i++)
         {
-            index = getIndexOfMin(input, 0, input.length);
+            index = getIndexOfMin(input, 0, toIndex);
             tmp[i] = input[index];
-            input[index] = Integer.MAX_VALUE;
+            input[index] = input[toIndex -1];
+            toIndex--;
         }
         return tmp;
     }
