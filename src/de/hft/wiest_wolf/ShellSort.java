@@ -21,9 +21,10 @@ public class ShellSort
     {
         int[] tmp = new int[input.length];
 
+        int index;
         for (int i=0; i < input.length; i++)
         {
-            int index = getIndexOfMin(input);
+            index = getIndexOfMin(input, 0, input.length);
             tmp[i] = input[index];
             input[index] = Integer.MAX_VALUE;
         }
