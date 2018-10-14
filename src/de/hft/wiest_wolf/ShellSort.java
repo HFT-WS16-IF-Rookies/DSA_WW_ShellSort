@@ -61,21 +61,21 @@ public class ShellSort
         return result;
     }
 
-    public static int getMax(int[] input)
+    public static int getMax(int[] input, int fromIndex, int toIndex)
     {
-        return input[getIndexOfMax(input)];
+        return input[getIndexOfMax(input, fromIndex, toIndex)];
     }
 
-    public static int getMin(int[] input)
+    public static int getMin(int[] input, int fromIndex, int toIndex)
     {
-        return input[getIndexOfMin(input)];
+        return input[getIndexOfMin(input, fromIndex, toIndex)];
     }
 
-    public static int getIndexOfMax(int[] input)
+    public static int getIndexOfMax(int[] input, int fromIndex, int toIndex)
     {
         int result = input[0];
         int index = 0;
-        for (int i=0; i < input.length; i++)
+        for (int i=fromIndex; i < toIndex; i++)
         {
             if (input[i] > result)
             {
@@ -87,11 +87,11 @@ public class ShellSort
         return index;
     }
 
-    public static int getIndexOfMin(int[] input)
+    public static int getIndexOfMin(int[] input, int fromIndex, int toIndex)
     {
         int result = input[0];
         int index = 0;
-        for (int i=0; i < input.length; i++)
+        for (int i=fromIndex; i < toIndex; i++)
         {
             if (input[i] < result)
             {
