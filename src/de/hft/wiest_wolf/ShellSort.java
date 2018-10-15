@@ -29,7 +29,7 @@ public class ShellSort
             @Override
             public void sort(int[] values)
             {
-                lukasSort(values);
+                wwSort(values);
             }
         },
         BUBBLESORT("Bubblesort")
@@ -129,7 +129,7 @@ public class ShellSort
         }
     }
 
-    public static int[] lukasSort(int[] input)
+    public static int[] wwSort(int[] input)
     {
         int indexMin = 0;
         int min;
