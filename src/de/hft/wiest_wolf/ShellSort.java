@@ -25,7 +25,7 @@ public class ShellSort
                 Arrays.sort(values);
             }
         },
-        LUKASSORT("Lukas-Sort")
+        LUKASSORT("WW-Sort")
         {
             @Override
             public void sort(int[] values)
