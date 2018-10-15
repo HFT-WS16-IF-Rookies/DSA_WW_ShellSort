@@ -13,6 +13,7 @@ public class ShellSort
 {
     public static long startTime;
     public static long stopTime;
+    public static Date date = new Date();
 
     enum Algo
     {
@@ -77,7 +78,7 @@ public class ShellSort
     public static void benchmark(int size)
     {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm");
-        String resultFile = "DSA_WW_SortBench_" + df.format(new Date());
+        String resultFile = "DSA_WW_SortBench_" + df.format(date);
         long[] runs;
         int[] generated = generate(size);
         int[] range;
