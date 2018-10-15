@@ -59,13 +59,9 @@ public class ShellSort
 
     public static void main(String[] args)
     {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm");
-//        DecimalFormat tf = new DecimalFormat("0000.0000 seconds");
-        String resultFile = "DSA_WW_SortBench_" + df.format(new Date());
-        StringBuilder buf = new StringBuilder();
-
-        final int TESTSIZE = 10000;
-        int[] generated = generate(TESTSIZE);
+        final int[] TESTSIZE = {100_000, 200_000, 300_000, 400_000, 500_000, 600_000};
+        for (int size: TESTSIZE)
+            benchmark(size);
 
 //        for (int i: generated)
 //            System.out.println(i);
@@ -76,9 +72,6 @@ public class ShellSort
 //        for (int i: generated)
 //            System.out.println(i);
 //        System.exit(0);
-
-        benchmark(TESTSIZE);
-        System.exit(0);
     }
 
     public static void benchmark(int size)
