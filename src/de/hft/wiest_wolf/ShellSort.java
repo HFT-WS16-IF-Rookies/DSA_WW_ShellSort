@@ -129,11 +129,6 @@ public class ShellSort
         }
     }
 
-    public static long erikSort(int[] input)
-    {
-        return stopTime - startTime;
-    }
-
     public static int[] lukasSort(int[] input)
     {
         int indexMin = 0;
@@ -217,47 +212,4 @@ public class ShellSort
 
         return result;
     }
-
-    public static int getMax(int[] input, int fromIndex, int toIndex)
-    {
-        return input[getIndexOfMax(input, fromIndex, toIndex)];
-    }
-
-    public static int getMin(int[] input, int fromIndex, int toIndex)
-    {
-        return input[getIndexOfMin(input, fromIndex, toIndex)];
-    }
-
-    public static int getIndexOfMax(int[] input, int fromIndex, int toIndex)
-    {
-        int result = input[0];
-        int index = 0;
-        for (int i=fromIndex; i < toIndex; i++)
-        {
-            if (input[i] > result)
-            {
-                result = input[i];
-                index = i;
-            }
-        }
-
-        return index;
-    }
-
-    public static int getIndexOfMin(int[] input, int fromIndex, int toIndex)
-    {
-        int result = input[0];
-        int index = 0;
-        for (int i=fromIndex; i < toIndex; i++)
-        {
-            if (input[i] < result)
-            {
-                result = input[i];
-                index = i;
-            }
-        }
-
-        return index;
-    }
-
 }
