@@ -19,8 +19,6 @@ public class ShellSort
 
     public static int[] lukasSort(int[] input)
     {
-        int[] tmp = new int[input.length];
-
         int indexMin = 0;
         int min;
         int indexMax = input.length-1;
@@ -61,15 +59,15 @@ public class ShellSort
                 }
             }
 
-            tmp[i] = min;
-            tmp[toIndex-1] = max;
             input[indexMin] = input[fromIndex];
             input[indexMax] = input[toIndex-1];
+            input[fromIndex] = min;
+            input[toIndex-1] = max;
 
             fromIndex++;
             toIndex--;
         }
-        return tmp;
+        return input;
     }
 
     public static void bubbleSort(int[] input)
