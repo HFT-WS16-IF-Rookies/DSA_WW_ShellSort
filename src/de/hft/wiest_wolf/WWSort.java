@@ -1,5 +1,8 @@
 package de.hft.wiest_wolf;
 
+//62wilu1bif Lukas Wiest
+//62woer1bif Erik Wolf
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
