@@ -63,16 +63,6 @@ public class ShellSort
         final int[] TESTSIZE = {100_000, 200_000, 300_000, 400_000, 500_000, 600_000};
         for (int size: TESTSIZE)
             benchmark(size);
-
-//        for (int i: generated)
-//            System.out.println(i);
-//
-//        generated = new int[] {5,8,9,3,4,6,2,8,0,10,20,3,5,4,6, 17};
-//        System.out.println("\n\nsorted:\n");
-//        generated = lukasSort(generated);
-//        for (int i: generated)
-//            System.out.println(i);
-//        System.exit(0);
     }
 
     public static void benchmark(int size)
@@ -123,7 +113,7 @@ public class ShellSort
         }
     }
 
-    public static int[] wwSort(int[] input)
+    public static void wwSort(int[] input)
     {
         int indexMin = 0;
         int min;
@@ -173,7 +163,6 @@ public class ShellSort
             fromIndex++;
             toIndex--;
         }
-        return input;
     }
 
     public static void bubbleSort(int[] input)
