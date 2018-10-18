@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
 
-public class ShellSort
+public class WWSort
 {
     public static long startTime;
     public static long stopTime;
