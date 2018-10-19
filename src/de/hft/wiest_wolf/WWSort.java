@@ -133,7 +133,9 @@ public class WWSort
             min = input[fromIndex];
             max = input[toIndex-1];
 
-            for (int j=0, innerFromIndex=fromIndex, innerToIndex=toIndex-1; j < innerLoops; j++, innerFromIndex++, innerToIndex--)
+            for (int j=0, innerFromIndex=fromIndex, innerToIndex=toIndex-1;
+                    j < innerLoops;
+                    j++, innerFromIndex++, innerToIndex--)
             {
                 if(input[innerFromIndex] < min)
                 {
